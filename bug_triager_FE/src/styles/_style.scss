@@ -1,0 +1,31 @@
+:root{
+--primary-color: #94072F;
+--secondary-color: rgb(87, 4, 27);
+    .custom-button-collapse{
+        width:100%;
+        border:0px;
+        background: var(--primary-color);
+        color:white;
+        padding:10px;
+        text-align: left;
+        margin: 10px 0px 10px 0px;
+    }
+    .custom-button-collapse:focus {
+        outline: 5px auto var(--secondary-color);
+    }
+    .custom-collapse-fa-icon{
+        float: right;
+        margin:4px 5px 0px 0px;
+        transition: transform 0.5s ease;
+
+    }
+
+    button[aria-expanded="true"]
+    {
+        .custom-collapse-fa-icon{
+            transition: transform 0.5s ease;
+            transform: rotate(90deg);
+        }
+    }    
+}
+
