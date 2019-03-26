@@ -1,5 +1,7 @@
 :root{
---primary-color: #94072F;
+--primary-color: #37474f;
+
+// 94072F
 --secondary-color: rgb(87, 4, 27);
     .custom-button-collapse{
         width:100%;
@@ -26,6 +28,20 @@
             transition: transform 0.5s ease;
             transform: rotate(90deg);
         }
-    }    
+    }  
+    
+    
+    .tab-btn-custom {
+      
+        background-color:#37474f ;
+    }
+
+    .tab-btn-custom:hover {
+        color: #eceff1 ;
+    }
+    .md-tabs .active:hover{
+        color:black !important;
+    }
+
 }
 

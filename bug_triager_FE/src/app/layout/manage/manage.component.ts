@@ -10,7 +10,6 @@ export class ManageComponent implements OnInit {
   @ViewChild('dataTable') table;
   dataTable: any;
   options: any;
-  currentJustify = 'justified';
 
   constructor() { }
 

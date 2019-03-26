@@ -1,200 +1,146 @@
-<ngb-tabset [justify]="currentJustify">
-  <ngb-tab title="Manage Users">
-    <ng-template ngbTabContent>
-
-      <!-- Collapse buttons -->
-      <div>
-        <button class="custom-button-collapse" type="button" data-toggle="collapse" data-target="#collapseExample"
-          aria-expanded="false" aria-controls="collapseExample">
-          <i class="fa fa-user"></i>
-          Users
-          <span><i class="fa fa-chevron-right custom-collapse-fa-icon"></i></span>
-        </button>
-      </div>
-
-      <div class="collapse" id="collapseExample">
-        <div class="mt-3">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim
-          keffiyeh helvetica,
-          craft beer labore wes anderson cred nesciunt sapiente ea proident.
-        </div>
-      </div>
-
-
-
-
-
-      <div>
-        <button class="custom-button-collapse" type="button" data-toggle="collapse" data-target="#collapseExample2"
-          aria-expanded="false" aria-controls="collapseExample2">
-          <i class="fa fa-user"></i>
-          Users
-          <span><i class="fa fa-chevron-right custom-collapse-fa-icon"></i></span>
-        </button>
-      </div>
-
-      <div class="collapse" id="collapseExample2">
-        <div class="mt-3">
-          Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim
-          keffiyeh helvetica,
-          craft beer labore wes anderson cred nesciunt sapiente ea proident.
-        </div>
-      </div>
-
-
-      <!-- / Collapsible element -->
-
-    </ng-template>
-  </ngb-tab>
-  <ngb-tab title="Manage Projects">
-    <ng-template ngbTabContent>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.
-      <p>Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko
-        farm-to-table
-        craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad
-        vinyl
-        cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia
-        yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable
-        jean
-        shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero
-        sint qui sapiente accusamus tattooed echo park.</p>
-    </ng-template>
-  </ngb-tab>
-  <ngb-tab title="Manage Tags">
-    <ng-template ngbTabContent>
-      <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam. Nulla facilisi.
-        Donec egestas ligula vitae odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt eu, congue et odio.
-        Duis pharetra et nisl at faucibus. Quisque luctus pulvinar arcu, et molestie lectus ultrices et. Sed diam urna,
-        egestas ut ipsum vel, volutpat volutpat neque. Praesent fringilla tortor arcu. Vivamus faucibus nisl enim, nec
-        tristique ipsum euismod facilisis. Morbi ut bibendum est, eu tincidunt odio. Orci varius natoque penatibus et
-        magnis dis parturient montes, nascetur ridiculus mus. Mauris aliquet odio ac lorem aliquet ultricies in eget
-        neque. Phasellus nec tortor vel tellus pulvinar feugiat.</p>
-    </ng-template>
-  </ngb-tab>
-  <ngb-tab title="Billing">
-    <ng-template ngbTabContent>
-      <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam. Nulla facilisi.
-        Donec egestas ligula vitae odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt eu, congue et odio.
-        Duis pharetra et nisl at faucibus. Quisque luctus pulvinar arcu, et molestie lectus ultrices et. Sed diam urna,
-        egestas ut ipsum vel, volutpat volutpat neque. Praesent fringilla tortor arcu. Vivamus faucibus nisl enim, nec
-        tristique ipsum euismod facilisis. Morbi ut bibendum est, eu tincidunt odio. Orci varius natoque penatibus et
-        magnis dis parturient montes, nascetur ridiculus mus. Mauris aliquet odio ac lorem aliquet ultricies in eget
-        neque. Phasellus nec tortor vel tellus pulvinar feugiat.</p>
-    </ng-template>
-  </ngb-tab>
-</ngb-tabset>
-
-
-
-
-<!-- 
-<button class="custom-collapse-button" type="button" data-toggle="collapse" data-target="#collapseExample"
-  aria-expanded="true" aria-controls="collapseExample">
-  <i class="fa fa-user"></i>
-  Users
-  <span><i class="fa fa-chevron-right custom-collapse-fa-icon"></i></span>
-</button>
-<div class="collapse custom-collapse-body" id="collapseExample">
-  <div class="card card-body">
-    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. Nihil anim keffiyeh
-    helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+<nav>
+  <div class="nav  nav-tabs md-tabs nav-fill" id="nav-tab" role="tablist">
+    <button class="btn nav-item nav-link active tab-btn-custom" id="nav-home-tab" data-toggle="tab" href="#nav-home"
+      role="tab" aria-controls="nav-home" aria-selected="true">Manage Users</button>
+    <button class="btn nav-item nav-link tab-btn-custom" id="nav-profile-tab" data-toggle="tab" href="#nav-profile"
+      role="tab" aria-controls="nav-profile" aria-selected="false">Manage Projects</button>
+    <button class="btn nav-item nav-link tab-btn-custom" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
+      role="tab" aria-controls="nav-contact" aria-selected="false">Manage Tags</button>
+    <button class="btn nav-item nav-link tab-btn-custom" id="nav-contact-tab" data-toggle="tab" href="#nav-contact"
+      role="tab" aria-controls="nav-contact" aria-selected="false">Billing</button>
   </div>
-</div> -->
+</nav>
+<div class="tab-content pt-5" id="nav-tabContent">
+  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
 
 
+    <div>
+      <button class="custom-button-collapse" type="button" data-toggle="collapse" data-target="#collapseExample"
+        aria-expanded="false" aria-controls="collapseExample">
+        <i class="fa fa-user"></i>
+        Users
+        <span><i class="fa fa-chevron-right custom-collapse-fa-icon"></i></span>
+      </button>
+    </div>
 
-<table #dataTable class="display" style="width:100%">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Position</th>
-      <th>Office</th>
-      <th>Age</th>
-      <th>Start date</th>
-      <th>Salary</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Tiger Nixon</td>
-      <td>System Architect</td>
-      <td>Edinburgh</td>
-      <td>61</td>
-      <td>2011/04/25</td>
-      <td>$320,800</td>
-    </tr>
-    <tr>
-      <td>Garrett Winters</td>
-      <td>Accountant</td>
-      <td>Tokyo</td>
-      <td>63</td>
-      <td>2011/07/25</td>
-      <td>$170,750</td>
-    </tr>
-    <tr>
-      <td>Ashton Cox</td>
-      <td>Junior Technical Author</td>
-      <td>San Francisco</td>
-      <td>66</td>
-      <td>2009/01/12</td>
-      <td>$86,000</td>
-    </tr>
-    <tr>
-      <td>Cedric Kelly</td>
-      <td>Senior Javascript Developer</td>
-      <td>Edinburgh</td>
-      <td>22</td>
-      <td>2012/03/29</td>
-      <td>$433,060</td>
-    </tr>
-    <tr>
-      <td>Airi Satou</td>
-      <td>Accountant</td>
-      <td>Tokyo</td>
-      <td>33</td>
-      <td>2008/11/28</td>
-      <td>$162,700</td>
-    </tr>
-    <tr>
-      <td>Brielle Williamson</td>
-      <td>Integration Specialist</td>
-      <td>New York</td>
-      <td>61</td>
-      <td>2012/12/02</td>
-      <td>$372,000</td>
-    </tr>
-    <tr>
-      <td>Herrod Chandler</td>
-      <td>Sales Assistant</td>
-      <td>San Francisco</td>
-      <td>59</td>
-      <td>2012/08/06</td>
-      <td>$137,500</td>
-    </tr>
-    <tr>
-      <td>Rhona Davidson</td>
-      <td>Integration Specialist</td>
-      <td>Tokyo</td>
-      <td>55</td>
-      <td>2010/10/14</td>
-      <td>$327,900</td>
-    </tr>
-    <tr>
-      <td>Colleen Hurst</td>
-      <td>Javascript Developer</td>
-      <td>San Francisco</td>
-      <td>39</td>
-      <td>2009/09/15</td>
-      <td>$205,500</td>
-    </tr>
-  </tbody>
-  <tfoot>
-    <tr>
-      <th>Name</th>
-      <th>Position</th>
-      <th>Office</th>
-      <th>Age</th>
-      <th>Start date</th>
-      <th>Salary</th>
-    </tr>
-  </tfoot>
-</table>
+    <div class="collapse" id="collapseExample">
+      <div class="mt-3">
+
+        <table #dataTable class="display" style="width:100%">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Position</th>
+              <th>Office</th>
+              <th>Age</th>
+              <th>Start date</th>
+              <th>Salary</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Tiger Nixon</td>
+              <td>System Architect</td>
+              <td>Edinburgh</td>
+              <td>61</td>
+              <td>2011/04/25</td>
+              <td>$320,800</td>
+            </tr>
+            <tr>
+              <td>Garrett Winters</td>
+              <td>Accountant</td>
+              <td>Tokyo</td>
+              <td>63</td>
+              <td>2011/07/25</td>
+              <td>$170,750</td>
+            </tr>
+            <tr>
+              <td>Ashton Cox</td>
+              <td>Junior Technical Author</td>
+              <td>San Francisco</td>
+              <td>66</td>
+              <td>2009/01/12</td>
+              <td>$86,000</td>
+            </tr>
+            <tr>
+              <td>Cedric Kelly</td>
+              <td>Senior Javascript Developer</td>
+              <td>Edinburgh</td>
+              <td>22</td>
+              <td>2012/03/29</td>
+              <td>$433,060</td>
+            </tr>
+            <tr>
+              <td>Airi Satou</td>
+              <td>Accountant</td>
+              <td>Tokyo</td>
+              <td>33</td>
+              <td>2008/11/28</td>
+              <td>$162,700</td>
+            </tr>
+            <tr>
+              <td>Brielle Williamson</td>
+              <td>Integration Specialist</td>
+              <td>New York</td>
+              <td>61</td>
+              <td>2012/12/02</td>
+              <td>$372,000</td>
+            </tr>
+            <tr>
+              <td>Herrod Chandler</td>
+              <td>Sales Assistant</td>
+              <td>San Francisco</td>
+              <td>59</td>
+              <td>2012/08/06</td>
+              <td>$137,500</td>
+            </tr>
+            <tr>
+              <td>Rhona Davidson</td>
+              <td>Integration Specialist</td>
+              <td>Tokyo</td>
+              <td>55</td>
+              <td>2010/10/14</td>
+              <td>$327,900</td>
+            </tr>
+            <tr>
+              <td>Colleen Hurst</td>
+              <td>Javascript Developer</td>
+              <td>San Francisco</td>
+              <td>39</td>
+              <td>2009/09/15</td>
+              <td>$205,500</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th>Name</th>
+              <th>Position</th>
+              <th>Office</th>
+              <th>Age</th>
+              <th>Start date</th>
+              <th>Salary</th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+    <p>Nulla est ullamco ut irure incididunt nulla Lorem Lorem minim irure officia enim reprehenderit. Magna
+      duis labore cillum sint adipisicing exercitation ipsum. Nostrud ut anim non exercitation velit laboris
+      fugiat cupidatat. Commodo esse dolore fugiat sint velit ullamco magna consequat voluptate minim amet
+      aliquip ipsum aute laboris nisi. Labore labore veniam irure irure ipsum pariatur mollit magna in
+      cupidatat dolore magna irure esse tempor ad mollit. Dolore commodo nulla minim amet ipsum officia
+      consectetur amet ullamco voluptate nisi commodo ea sit eu.</p>
+  </div>
+  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+    <p>Sint sit mollit irure quis est nostrud cillum consequat Lorem esse do quis dolor esse fugiat sunt do. Eu
+      ex commodo veniam Lorem aliquip laborum occaecat qui Lorem esse mollit dolore anim cupidatat. Deserunt
+      officia id Lorem nostrud aute id commodo elit eiusmod enim irure amet eiusmod qui reprehenderit nostrud
+      tempor. Fugiat ipsum excepteur in aliqua non et quis aliquip ad irure in labore cillum elit enim.
+      Consequat aliquip incididunt ipsum et minim laborum laborum laborum et cillum labore. Deserunt
+      adipisicing cillum id nulla minim nostrud labore eiusmod et amet. Laboris consequat consequat commodo non
+      ut non aliquip reprehenderit nulla anim occaecat. Sunt sit ullamco reprehenderit irure ea ullamco Lorem
+      aute nostrud magna.</p>
+  </div>
+</div>
