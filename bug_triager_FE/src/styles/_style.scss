@@ -2,7 +2,56 @@
 --primary-color: #37474f;
 
 // 94072F
---secondary-color: rgb(87, 4, 27);
+--secondary-color: #cfd8dc; 
+
+
+    th{
+        background: #546e7a;
+        color: white;
+    }
+    tbody{
+        // background-color: #cfd8dc ;
+    }
+    .paginate_button{
+        background: linear-gradient(to top, white 0%, var(--primary-color) 100%) !important;
+        border:solid 0px black !important;
+
+    }
+
+    .table_icon_custom{
+        text-align: center;
+    }
+    .table_icon_button_custom{
+        
+    }
+
+    .collapse-body-custom{
+        width:95%;
+        margin:auto;
+    }
+
+    .dataTables_wrapper .dataTables_filter input ,  .dataTables_length select{
+        font-family: Georgia, "Times New Roman", Times, serif;
+        background: rgba(255,255,255,.1);
+        border: none;
+        border-radius: 4px;
+        font-size: 15px;
+        margin: 0;
+        outline: 0;
+        padding: 10px;
+        // width: 100%;
+        box-sizing: border-box; 
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box; 
+        background-color: #e8eeef;
+        color:#8a97a0;
+        -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+        box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+
+    }
+
+   
+
     .custom-button-collapse{
         width:100%;
         border:0px;
@@ -13,7 +62,7 @@
         margin: 10px 0px 10px 0px;
     }
     .custom-button-collapse:focus {
-        outline: 5px auto var(--secondary-color);
+        outline: 0px auto var(--secondary-color);
     }
     .custom-collapse-fa-icon{
         float: right;
