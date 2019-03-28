@@ -8,6 +8,14 @@ import { LayoutComponent } from './layout.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ManageComponent } from './manage/manage.component';
+import { UserFormComponent } from './components/user-form/user-form.component';
+import { AddBugComponent } from './add-bug/add-bug.component';
+import { AllBugsComponent } from './all-bugs/all-bugs.component';
+import { FormsModule } from '@angular/forms';
+import { PageHeaderModule } from '../shared';
+import { NgDragDropModule } from 'ng-drag-drop';
+
+
 
 @NgModule({
     imports: [
@@ -15,8 +23,11 @@ import { ManageComponent } from './manage/manage.component';
         LayoutRoutingModule,
         TranslateModule,
         NgbDropdownModule,
-        NgbTabsetModule
+        NgbTabsetModule,
+        FormsModule,
+        PageHeaderModule,
+        NgDragDropModule.forRoot()
     ],
-    declarations: [LayoutComponent, SidebarComponent, HeaderComponent, ManageComponent]
+    declarations: [LayoutComponent, SidebarComponent, HeaderComponent, ManageComponent, UserFormComponent, AddBugComponent, AllBugsComponent]
 })
 export class LayoutModule {}

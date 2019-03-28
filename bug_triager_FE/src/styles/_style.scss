@@ -1,8 +1,18 @@
 :root{
 --primary-color: #37474f;
-
+--primary-contrast: #4f3737;
 // 94072F
 --secondary-color: #cfd8dc; 
+
+
+    .btn-custom {
+        background : var(--primary-color);
+    }
+    .btn-custom:hover {
+        background: var(--primary-contrast);
+        color:white;
+        
+    }
 
 
     th{
