@@ -1,14 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgbModal, ModalDismissReasons } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-    selector: 'app-modal',
-    templateUrl: './modal.component.html',
-    styleUrls: ['./modal.component.scss']
+  selector: 'app-add-new-bug',
+  templateUrl: './add-new-bug.component.html',
+  styleUrls: ['./add-new-bug.component.scss']
 })
-export class ModalComponent {
+
+export class AddNewBugComponent implements OnInit {
     closeResult: string;
+
     constructor(private modalService: NgbModal) { }
+
+    ngOnInit() {
+    }
 
     open(content) {
         this.modalService.open(content, {backdrop: 'static', centered: true, size: 'lg'}).result.then((result) => {
@@ -16,6 +21,11 @@ export class ModalComponent {
         }, (reason) => {
             // this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
         });
+    }
+
+    onAssigned(value) {
+      console.log(value);
+      this.modalService.dismissAll();
     }
 
     // private getDismissReason(reason: any): string {

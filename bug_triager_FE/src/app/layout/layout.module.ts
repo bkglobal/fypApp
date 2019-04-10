@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
-import { NgbDropdownModule,  NgbTabsetModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbDropdownModule,  NgbTabsetModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { LayoutRoutingModule } from './layout-routing.module';
 import { LayoutComponent } from './layout.component';
@@ -14,6 +14,8 @@ import { AllBugsComponent } from './all-bugs/all-bugs.component';
 import { FormsModule } from '@angular/forms';
 import { PageHeaderModule } from '../shared';
 import { NgDragDropModule } from 'ng-drag-drop';
+import { AddNewBugComponent } from './components/add-new-bug/add-new-bug.component';
+import { AutoSearchModalComponent } from './components/auto-search-modal/auto-search-modal.component';
 
 
 
@@ -25,9 +27,10 @@ import { NgDragDropModule } from 'ng-drag-drop';
         NgbDropdownModule,
         NgbTabsetModule,
         FormsModule,
+        NgbModule,
         PageHeaderModule,
         NgDragDropModule.forRoot()
     ],
-    declarations: [LayoutComponent, SidebarComponent, HeaderComponent, ManageComponent, UserFormComponent, AddBugComponent, AllBugsComponent]
+    declarations: [LayoutComponent, SidebarComponent, HeaderComponent, ManageComponent, UserFormComponent, AddBugComponent, AllBugsComponent, AddNewBugComponent, AutoSearchModalComponent]
 })
 export class LayoutModule {}

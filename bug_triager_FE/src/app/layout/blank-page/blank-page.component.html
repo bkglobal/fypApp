@@ -1,4 +1,42 @@
-<table #dataTable class="display" style="width:100%">
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card mb-3">
+            <div class="card-header">Modal</div>
+            <!-- Large modal -->
+            <div class="card-body">
+                <button class="btn btn-primary" (click)="open(content)">Large modal</button>
+                <ng-template #content let-c="close" let-d="dismiss">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Modal title</h4>
+                        <a type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                            <span aria-hidden="true">&times;</span>
+                        </a>
+                    </div>
+                    <div class="modal-body">
+                        <p>One fine body ne fine bodyOne fine body ne fine body ne fine body ne fine bodyOne fine body ne fine body ne fine body ne fine bodyOne fine body ne fine body&hellip;</p>
+                        <p>One fine body ne fine bodyOne fine body ne fine body ne fine body ne fine bodyOne fine body ne fine body ne fine body ne fine bodyOne fine body ne fine body&hellip;</p>
+                        <p>One fine body ne fine bodyOne fine body ne fine body ne fine body ne fine bodyOne fine body ne fine body ne fine body ne fine bodyOne fine body ne fine body&hellip;</p>
+                        <p>One fine body ne fine bodyOne fine body ne fine body ne fine body ne fine bodyOne fine body ne fine body ne fine body ne fine bodyOne fine body ne fine body&hellip;</p>
+                        <p>One fine body ne fine bodyOne fine body ne fine body ne fine body ne fine bodyOne fine body ne fine body ne fine body ne fine bodyOne fine body ne fine body&hellip;</p>
+             
+
+                    </div>
+                    <div class="modal-footer">
+                        <a type="button" class="btn btn-secondary" (click)="c('Close click')">Close</a>
+                    </div>
+                </ng-template>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<!-- <table #dataTable class="display" style="width:100%">
     <thead>
         <tr>
             <th>Name</th>
@@ -93,4 +131,4 @@
             <th>Salary</th>
         </tr>
     </tfoot>
-</table>
+</table> -->

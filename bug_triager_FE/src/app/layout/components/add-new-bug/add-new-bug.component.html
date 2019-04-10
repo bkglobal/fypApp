@@ -1,0 +1,74 @@
+<div class="user-form-custom">
+  <form role="form" action="/">
+    <fieldset class="form-group">
+      <label>Project</label>
+      <select [(ngModel)]="project" name="project" class="form-control">
+        <option value="1">Low</option>
+        <option value="2">Medium</option>
+        <option value="3">High</option>
+      </select>
+      <!-- <p class="help-block">Example block-level help text here.</p> -->
+    </fieldset>
+
+    <fieldset class="form-group">
+      <label>Summary</label>
+      <input [(ngModel)]="summary" name="summary" type="summary" class="form-control" placeholder="Enter Summary"
+        required>
+    </fieldset>
+
+
+    <fieldset class="form-group">
+      <label>Description</label>
+      <textarea [(ngModel)]="description" name="description" class="form-control" placeholder="Enter Description"
+        required></textarea>
+    </fieldset>
+
+
+
+
+    <div class="form-group">
+      <label>Priority</label>
+      <select [(ngModel)]="priority" name="priority" class="form-control">
+        <option value="1">Low</option>
+        <option value="2">Medium</option>
+        <option value="3">High</option>
+      </select>
+    </div>
+
+    <!-- <fieldset class="form-group">
+        <label>Mobile</label>
+        <input [(ngModel)]="number" name="number" type="number" class="form-control" placeholder="Enter Mobile Number" required>
+    </fieldset> -->
+
+    <fieldset class="form-group">
+      <label>Assignee</label>
+      <input [(ngModel)]="assignee" name="Assignee" type="text" class="form-control" required>
+      <div style="width:100%; text-align: center;">OR</div>
+      <div style="width:100%; text-align: center;"><button type="submit" (click)="open(content)"
+          class="btn btn-custom">Automatic Search For Assignee</button></div>
+
+    </fieldset>
+
+    <button type="submit" (click)="values_validate_add()" class="btn btn-custom">Add Bug</button>
+    <button type="reset" class="btn btn-custom float-right">Reset Fields</button>
+
+  </form>
+</div>
+
+
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Automatic Assignment</h4>
+    <a type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </a>
+  </div>
+  <div class="modal-body">
+  
+   <app-auto-search-modal (assigned)="onAssigned($event)"></app-auto-search-modal>
+
+  </div>
+  <div class="modal-footer">
+    <a type="button" class="btn btn-custom " (click)="c('Close click')">Close</a>
+  </div>
+</ng-template>
