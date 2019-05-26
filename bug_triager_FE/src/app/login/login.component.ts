@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { routerTransition } from '../router.animations';
+import { FormGroup, FormControl } from '@angular/forms';
+
 
 @Component({
     selector: 'app-login',

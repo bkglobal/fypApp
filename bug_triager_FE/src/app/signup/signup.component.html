@@ -2,25 +2,35 @@
     <div class="row justify-content-md-center">
         <div class="col-md-4">
             <img class="user-avatar" src="assets/images/logo.png" width="150px" />
-            <h1>SB Admin BS4 Angular7</h1>
+            <h1>Bug Triager</h1>
+            <ngb-alert type="danger" (close)="closeAlert(alert)" *ngIf="message">{{ message }}</ngb-alert>
             <form role="form">
                 <div class="form-content">
                     <div class="form-group">
-                        <input type="text" class="form-control input-underline input-lg" id="" placeholder="{{ 'Full Name' | translate }}">
+                        <input type="text" [(ngModel)]="name" name="name" class="form-control input-underline input-lg"  placeholder="{{ 'Name' | translate }}">
                     </div>
 
                     <div class="form-group">
-                        <input type="text" class="form-control input-underline input-lg" id="" placeholder="{{ 'Email' | translate }}">
+                        <input type="text" [(ngModel)]="email" name="email"  class="form-control input-underline input-lg"  placeholder="{{ 'Email' | translate }}">
                     </div>
 
                     <div class="form-group">
-                        <input type="password" class="form-control input-underline input-lg" id="" placeholder="{{ 'Password' | translate }}">
+                        <input type="password" [(ngModel)]="password" name="password" class="form-control input-underline input-lg" placeholder="{{ 'Password' | translate }}">
                     </div>
                     <div class="form-group">
-                        <input type="password" class="form-control input-underline input-lg" id="" placeholder="{{ 'Repeat Password' | translate }}">
+                        <input type="password" [(ngModel)]="confirmPassword" name="confirmPassword" class="form-control input-underline input-lg"  placeholder="{{ 'Repeat Password' | translate }}">
                     </div>
+                    <div class="form-group" >
+                        <select  class="form-control input-underline input-lg" [(ngModel)]="role" name="role">
+                            <option selected disabled>Select the role</option>
+                            <option value="1">Administrator</option>
+                            <option value="2">Tester</option>
+                            <option value="3">Developer</option>
+                        </select>
+                    </div>
+                    
                 </div>
-                <a class="btn rounded-btn" [routerLink]="['/dashboard']">{{ 'Register' | translate }}</a>&nbsp;
+                <a class="btn rounded-btn" (click)="register()" type="submit" >{{ 'Register' | translate }}</a>&nbsp;
                 <a class="btn rounded-btn" [routerLink]="['/login']">{{ 'Log in' | translate }}</a>
             </form>
         </div>

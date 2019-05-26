@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { NgbDropdownModule,  NgbTabsetModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ChartsModule as Ng2Charts } from 'ng2-charts';
 
 import { LayoutRoutingModule } from './layout-routing.module';
 import { LayoutComponent } from './layout.component';
@@ -16,6 +17,9 @@ import { PageHeaderModule } from '../shared';
 import { NgDragDropModule } from 'ng-drag-drop';
 import { AddNewBugComponent } from './components/add-new-bug/add-new-bug.component';
 import { AutoSearchModalComponent } from './components/auto-search-modal/auto-search-modal.component';
+// import { ChartsComponent } from './charts/charts.component';
+import { ChartsModule } from './charts/charts.module';
+import { ChartComponent } from './components/chart/chart.component';
 
 
 
@@ -29,8 +33,9 @@ import { AutoSearchModalComponent } from './components/auto-search-modal/auto-se
         FormsModule,
         NgbModule,
         PageHeaderModule,
-        NgDragDropModule.forRoot()
+        NgDragDropModule.forRoot(),
+        ChartsModule
     ],
-    declarations: [LayoutComponent, SidebarComponent, HeaderComponent, ManageComponent, UserFormComponent, AddBugComponent, AllBugsComponent, AddNewBugComponent, AutoSearchModalComponent]
+    declarations: [LayoutComponent, SidebarComponent, HeaderComponent, ManageComponent, UserFormComponent, AddBugComponent, AllBugsComponent, AddNewBugComponent, AutoSearchModalComponent, ChartComponent]
 })
 export class LayoutModule {}

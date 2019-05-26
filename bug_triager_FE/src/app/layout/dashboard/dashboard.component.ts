@@ -11,6 +11,8 @@ export class DashboardComponent implements OnInit {
     public alerts: Array<any> = [];
     public sliders: Array<any> = [];
 
+
+    
     constructor() {
         this.sliders.push(
             {
